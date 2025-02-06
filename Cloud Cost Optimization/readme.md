@@ -1,0 +1,38 @@
+<h1>Automated AWS Cost Optimization: Detecting and Deleting stale resources Snapshots</h1>
+<h2>This project aims to optimize AWS cloud costs by automating the detection and removal of stale EBS snapshots. 
+  
+Motto of the Project:
+AWS resources, particularly snapshots, can accumulate over time and incur unnecessary costs if not actively managed. By implementing automated scripts and monitoring tools, this project identifies such stale resources, flags them, and safely deletes unnecessary snapshots, effectively reducing overall cloud expenses.</h2>
+
+<h1>Key Features</h1>
+
+<h2>Automated Snapshot Identification: Detects unused or outdated snapshots across your AWS environment.
+Cost Savings: Helps reduce AWS storage costs by cleaning up unneeded snapshots.
+
+Scheduling & Alerts: Allows scheduled cleanup and notifications for resource management.
+
+Scalable & Flexible: Designed to work across different AWS services and can be customized to specific use cases.</h2>
+
+<h1>The list of services used in this project</h1>
+<h2>EC2, EBS, Lambda, Cloud Watch, EventBridge Management, IAM </h2> 
+
+<h1>The End to End steps</h1>
+<h2>1. Create an EC2 Instance and Take a Snapshot of its EBS Volume
+        Launch an EC2 instance and attach an EBS volume to it.
+        Create snapshots of the EBS volumes attached to the EC2 instance to backup data.
+</h2>
+<h2>2. Create a Lambda Function and Add the Python Code
+        Create an AWS Lambda function within the Lambda console.
+        Write or paste the Python code in the function’s inline editor to handle the detection and deletion of stale snapshots. 
+</h2>
+<h2>3. Deploy the Lambda Function and Attach Necessary Policies to the IAM Role
+        After pasting the Python code into the Lambda function, deploy the code.
+        Attach an IAM policy to the Lambda's execution role that allows it to list EC2 instances, EBS volumes, and snapshots.
+</h2>
+<h2>4. Test the Lambda Function for Output
+        Once the policy is attached, manually test the Lambda function in the AWS Lambda console to ensure it is executing correctly and returning the expected output.
+</h2>
+<h2>5. Create a CloudWatch Rule to Invoke Lambda on a Schedule
+        Create a CloudWatch Event Rule that triggers the Lambda function. Set the cron expression to invoke the function every Monday at 12:00 AM.
+        Attach the IAM role that has the necessary permissions to invoke the Lambda function in the EventBridge Rule.
+</h2>

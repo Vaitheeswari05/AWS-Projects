@@ -17,22 +17,22 @@ Scalable & Flexible: Designed to work across different AWS services and can be c
 <h2>EC2, EBS, Lambda, Cloud Watch, EventBridge Management, IAM </h2> 
 
 <h1>The End to End steps</h1>
-<h2>1. Create an EC2 Instance and Take a Snapshot of its EBS Volume
-        Launch an EC2 instance and attach an EBS volume to it.
-        Create snapshots of the EBS volumes attached to the EC2 instance to backup data.
-</h2>
-<h2>2. Create a Lambda Function and Add the Python Code
-        Create an AWS Lambda function within the Lambda console.
-        Write or paste the Python code in the function’s inline editor to handle the detection and deletion of stale snapshots. 
-</h2>
-<h2>3. Deploy the Lambda Function and Attach Necessary Policies to the IAM Role
-        After pasting the Python code into the Lambda function, deploy the code.
-        Attach an IAM policy to the Lambda's execution role that allows it to list EC2 instances, EBS volumes, and snapshots.
-</h2>
+<h2>1. Create an EC2 Instance and Take a Snapshot of its EBS Volume</h2>
+        <h2>Launch an EC2 instance and attach an EBS volume to it.</h2>
+        <h2>Create snapshots of the EBS volumes attached to the EC2 instance to backup data.</h2>
+
+<h2>2. Create a Lambda Function and Add the Python Code</h2>
+        <h2>Create an AWS Lambda function within the Lambda console.</h2>
+        <h2>Write or paste the Python code in the function’s inline editor to handle the detection and deletion of stale snapshots.</h2>
+
+<h2>3. Deploy the Lambda Function and Attach Necessary Policies to the IAM Role</h2>
+        <h2>After pasting the Python code into the Lambda function, deploy the code.</h2>
+        <h2>Attach an IAM policy to the Lambda's execution role that allows it to list EC2 instances, EBS volumes, and snapshots.</h2>
+
 <h2>4. Test the Lambda Function for Output
-        Once the policy is attached, manually test the Lambda function in the AWS Lambda console to ensure it is executing correctly and returning the expected output.
+        <h2>Once the policy is attached, manually test the Lambda function in the AWS Lambda console to ensure it is executing correctly and returning the expected output.</h2>
 </h2>
-<h2>5. Create a CloudWatch Rule to Invoke Lambda on a Schedule
-        Create a CloudWatch Event Rule that triggers the Lambda function. Set the cron expression to invoke the function every Monday at 12:00 AM.
-        Attach the IAM role that has the necessary permissions to invoke the Lambda function in the EventBridge Rule.
-</h2>
+<h2>5. Create a CloudWatch Rule to Invoke Lambda on a Schedule</h2>
+        <h2>Create a CloudWatch Event Rule that triggers the Lambda function. Set the cron expression to invoke the function every Monday at 12:00 AM.</h2>
+        <h2>Attach the IAM role that has the necessary permissions to invoke the Lambda function in the EventBridge Rule.</h2>
+

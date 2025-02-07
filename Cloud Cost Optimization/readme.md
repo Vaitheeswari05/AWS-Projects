@@ -37,4 +37,4 @@ Scalable & Flexible: Designed to work across different AWS services and can be c
 <h2>5. Create a CloudWatch Rule to Invoke Lambda on a Schedule</h2>
         <h3>Create a CloudWatch Event Rule that triggers the Lambda function. Set the cron expression to invoke the function every Monday at 12:00 AM.</h3>
         <h3>Attach the IAM role that has the necessary permissions to invoke the Lambda function in the EventBridge Rule.</h3>
-![cloudwatch_Eventbridge](Cloud Cost Optimization/schedule the job using cloud watch_1.jpg)
+![cloudwatch_Eventbridge](https://github.com/Vaitheeswari05/AWS-Projects/blob/8561ff05c2dd8575116e42a72a036f7610c52d06/Cloud%20Cost%20Optimization/schedule%20the%20job%20using%20cloud%20watch_1.jpg)
